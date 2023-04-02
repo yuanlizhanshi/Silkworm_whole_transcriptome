@@ -41,10 +41,10 @@ hisat2-build -p 40 ncbi_silkworm_Ac_genome.fa --ss splice.txt --exon exons.txt s
 
 Using [stringtie](https://github.com/gpertea/stringtie) to identify new transcript
 
-This optional if your gtf is not incompatible with stringtie (because stringtie can't accept transcript_id == '' ):
-awk -F '\t' '$3 != "gene" ' ../../new_genome/ncbi_silkworm_Ac_genome.gtf > ncbi_stringtie_fix.gtf
+This optional if your gtf is not incompatible with stringtie (because stringtie can't accept transcript_id == '' ):\
+>awk -F '\t' '$3 != "gene" ' ncbi_silkworm_Ac_genome.gtf > ncbi_stringtie_fix.gtf
 
-stringtie all_sorted.bam -m 200 -p 40 -G ncbi_stringtie_fix.gtf -T 1 -o new.gtf
+>stringtie all_sorted.bam -m 200 -p 40 -G ncbi_stringtie_fix.gtf -T 1 -o new.gtf
 
 ### 7. Annotate the long non coding RNA
 Run [FEELnc](https://github.com/tderrien/FEELnc) 3 steps to find new long non coding RNA.
