@@ -12,7 +12,7 @@ Using [fastp](https://github.com/OpenGene/fastp) to trim reads and filter low qu
 ### 2. Remove unpaired reads (optional) and aggregate reads form all samples 
 
 #fix unpaired reads with [seqkit](https://bioinf.shenwei.me/seqkit/usage/)
->seqkit pair -1 $i.clean.R1.fq.gz -2 $i.clean.R2.fq.gz
+>seqkit pair -1 clean.R1.fq.gz -2 clean.R2.fq.gz
 
 #concatenate reads 
 >cat *.clean.R1.paired.fq.gz > all_R1.fq.gz\
