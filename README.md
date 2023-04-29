@@ -101,7 +101,7 @@ done
 
 #this script require #2 mapping results as input and generate sample.collapse.-rfam.fa and sample.genome.-rfam.arf, please put sample.collapse.fa and sample.genome.arf and stript into the same folder.
 
-[miRDeep2](https://github.com/rajewsky-lab/mirdeep2) only accept fasta file without space, if your fasta file have space, you should fix_fa_header.py to fix your fasta file.
+[miRDeep2](https://github.com/rajewsky-lab/mirdeep2) only accept fasta file without space, if your fasta file have space, you should use fix_fa_header.py to fix your fasta file.
 
 >miRDeep2.pl sample.collapse.-rfam.fa \
 ncbi_silkworm_Ac_genome.fasta sample.genome.-rfam.arf \
