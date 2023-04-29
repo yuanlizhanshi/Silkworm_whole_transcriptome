@@ -1,5 +1,5 @@
 # Silkworm_whole_transcriptome
- This Repository contain several indiviual script and analysis pipeline for whole transcriptome **upsteam** analysis
+ This Repository contains several indiviual script and analysis pipeline for whole transcriptome **upsteam** analysis
 
 ## For long non coding RNA
 Paired-end 150bp fastq file used in this study.
