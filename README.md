@@ -64,7 +64,7 @@ It is recommend to use conda to install FEELnc.
 ### 8. Quantify expression of all gene in gtf
 >snakemake -s run_RNA-seq.smk -c 40
 
-## For micro RNA-seq
+## For microRNA-seq
 
 Single-read 75 bp fastq file used in this study.
 
@@ -101,11 +101,13 @@ done
 
 #this script require #2 mapping results as input and generate sample.collapse.-rfam.fa and sample.genome.-rfam.arf, please put sample.collapse.fa and sample.genome.arf and stript into the same folder.
 
+[miRDeep2](https://github.com/rajewsky-lab/mirdeep2) only accept fasta file without space, if your fasta file have space, you should fix_fa_header.py to fix your fasta file.
+
 >miRDeep2.pl sample.collapse.-rfam.fa \
 ncbi_silkworm_Ac_genome.fasta sample.genome.-rfam.arf \
 bmo.fa mature.fa hairpin.fa 2>sample.log
 
-#miRDeep2 only accept fasta file without space, if your fasta file have space, you should fix_fa_header.py to fix your fasta file
+
 
 The bmo.fa mature.fa hairpin.fa were download form [miRbase](https://www.mirbase.org/ftp.shtml), which is also in data.tar.gz
 
