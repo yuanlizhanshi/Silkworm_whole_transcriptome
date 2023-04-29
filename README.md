@@ -27,7 +27,7 @@ cat ncbi_genome_bm.gtf AcMNPV.gtf >ncbi_silkworm_Ac_genome.gtf
 
 ### 4. Build genome index
 
-Using [hisat2](https://github.com/DaehwanKimLab/hisat2):\
+Using [hisat2](https://github.com/DaehwanKimLab/hisat2):
 >hisat2_extract_splice_sites.py ncbi_silkworm_Ac_genome.gtf > splice.txt\
 hisat2_extract_exons.py ncbi_silkworm_Ac_genome.gtf > exons.txt\
 hisat2-build -p 40 ncbi_silkworm_Ac_genome.fa --ss splice.txt --exon exons.txt silkworm_Ac_ht_index
