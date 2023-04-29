@@ -16,7 +16,11 @@ load_csv <- function(x) {
 }
 
 count_list <- map(all_file,load_csv)
-miRNA_count <- purrr::reduce(count_list,full_join) %>% 
+miRNA_count <- purrr::reduce(count_list,full_join,) %>% 
     select(1,3,2,4:8) %>% 
-    mutate(across(where(is.numeric), ~replace_na(.x, 0)))
+    mutate(across(where(is.numeric), ~replace_na(.x, 0))) %>% 
+    distinct(miRNA,.keep_all = T)
+
 data.table::fwrite(miRNA_count,file = 'miRDeep2_output/miRNA_count_matrix.txt',sep = '\t')
+
+
