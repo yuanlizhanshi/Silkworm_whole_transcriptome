@@ -34,7 +34,7 @@ hisat2-build -p 40 ncbi_silkworm_Ac_genome.fa --ss splice.txt --exon exons.txt s
 
 Then mapping to the reference genome
 
-`hisat2 --dta -p 40 -1 all_R1.fq.gz -2 all_R2.fq.gz -x silkworm_Ac_ht_index |samtools view -q 10 -b - > all.bam`
+`hisat2 --dta -p 40 -1 all_R1.fq.gz -2 all_R2.fq.gz --rf -x silkworm_Ac_ht_index |samtools view -q 10 -b - > all.bam`
 
 >samtools sort -@ 40 -o all_sorted.bam all.bam
 
